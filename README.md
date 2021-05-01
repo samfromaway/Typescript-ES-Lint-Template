@@ -1,132 +1,48 @@
-# A statically generated blog example using Next.js and Cosmic
+# CI Boilerplate - Next JS and Typescript
 
-This example showcases Next.js's [Static Generation](https://nextjs.org/docs/basic-features/pages) feature using [Cosmic](https://cosmicjs.com/) as the data source.
+This is a Next JS starting base for a production ready application. It's built with es-lint, prettier, husky and github actions. The code is written in Typescript.
 
-## Demo
+## Base for this video
+Check out this video to get more information: [https://youtu.be/IrPz0kd2FTk](https://youtu.be/IrPz0kd2FTk)
 
-[https://cosmic-next-blog.vercel.app/](https://cosmic-next-blog.vercel.app/)
+## My VS-Code settings
 
-## Deploy your own
+`{
+    "git.suggestSmartCommit": false,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "prettier.singleQuote": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "emmet.excludeLanguages": [
+        "markdown"
+    ],
+    "workbench.iconTheme": "material-icon-theme",
+    "json.schemas": [
+    
+    ],
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "tabnine.experimentalAutoImports": true,
+    "editor.fontSize": 15,
+    "liveshare.authenticationProvider": "GitHub",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "window.zoomLevel": 1
+}`
 
-Once you have access to [the environment variables you'll need](#step-3-set-up-environment-variables), deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+## Installed VS Code Plugins
+Don't forget to install the plugins:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/cms-cosmic&project-name=cms-cosmic&repository-name=cms-cosmic&env=COSMIC_BUCKET_SLUG,COSMIC_READ_KEY,COSMIC_PREVIEW_SECRET&envDescription=Required%20to%20connect%20the%20app%20with%20Cosmic&envLink=https://vercel.link/cms-cosmic-env)
+[ES-Lint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+[Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
-### Related examples
-
-- [WordPress](/examples/cms-wordpress)
-- [DatoCMS](/examples/cms-datocms)
-- [Sanity](/examples/cms-sanity)
-- [TakeShape](/examples/cms-takeshape)
-- [Prismic](/examples/cms-prismic)
-- [Contentful](/examples/cms-contentful)
-- [Strapi](/examples/cms-strapi)
-- [Agility CMS](/examples/cms-agilitycms)
-- [ButterCMS](/examples/cms-buttercms)
-- [Storyblok](/examples/cms-storyblok)
-- [GraphCMS](/examples/cms-graphcms)
-- [Kontent](/examples/cms-kontent)
-- [Ghost](/examples/cms-ghost)
-- [Blog Starter](/examples/blog-starter)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example cms-cosmic cms-cosmic-app
-# or
-yarn create next-app --example cms-cosmic cms-cosmic-app
-```
-
-## Configuration
-
-### Step 1. Create an account and a project on Cosmic
-
-First, [create an account on Cosmic](https://cosmicjs.com).
-
-### Step 2. Install the Next.js Static Blog app
-
-After creating an account, install the [Next.js Static Blog](https://www.cosmicjs.com/apps/nextjs-static-blog) app from the Cosmic App Marketplace.
-
-### Step 3. Set up environment variables
-
-Go to the **Settings** menu at the sidebar and click **Basic Settings**.
-
-Next, copy the `.env.local.example` file in this directory to `.env.local` (which will be ignored by Git):
-
-```bash
-cp .env.local.example .env.local
-```
-
-Then set each variable on `.env.local`:
-
-- `COSMIC_BUCKET_SLUG` should be the **Bucket slug** key under **Basic Settings**.
-- `COSMIC_READ_KEY` should be the **Read Key** under **API Access**.
-- `COSMIC_PREVIEW_SECRET` can be any random string (but avoid spaces) - this is used for [Preview Mode](https://nextjs.org/docs/advanced-features/preview-mode).
-
-Your `.env.local` file should look like this:
-
-```bash
-COSMIC_BUCKET_SLUG=...
-COSMIC_READ_KEY=...
-COSMIC_PREVIEW_SECRET=...
-```
-
-### Step 4. Run Next.js in development mode
-
-```bash
-npm install
-npm run dev
-
-# or
-
-yarn install
-yarn dev
-```
-
-Your blog should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
-
-### Step 5. Try preview mode
-
-To add the ability to preview content from your Cosmic dashboard go to **Posts > Edit Settings** and scroll down to the "Preview Link" section. (Screenshot below)
-
-![Image](https://cdn.cosmicjs.com/14e6c0f0-a07b-11ea-829b-5b458b05d525-preview-link.png)
-
-Add your live URL or localhost development URL which includes your chosen preview secret and `[object_slug]` shortcode. It should look like the following:
-
-```
-http://localhost:3000/api/preview?secret=<secret>&slug=[object_slug]
-```
-
-- `<secret>` is the string you entered for `COSMIC_PREVIEW_SECRET`.
-- `[object_slug]` shortcode will automatically be converted to the post's `slug` attribute.
-
-On Cosmic, go to one of the posts you've created and:
-
-- **Update the title**. For example, you can add `[Draft]` in front of the title.
-- Click **Save Draft**, but **DO NOT** click **Publish**. By doing this, the post will be in the draft state.
-
-Now, if you go to the post page directly on localhost, you won't see the updated title. However, if you use the **Preview Mode**, you'll be able to see the change ([Documentation](https://nextjs.org/docs/advanced-features/preview-mode)).
-
-Next, click the Preview Link button on the Post to see the updated title. (Screenshot below)
-
-<img src="https://cdn.cosmicjs.com/80f42680-a07a-11ea-829b-5b458b05d525-preview-button.png" width="300" />
-
-To exit preview mode, you can click on **Click here to exit preview mode** at the top.
-
-### Step 6. Deploy on Vercel
-
-You can deploy this app to the cloud with [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-#### Deploy Your Local Project
-
-To deploy your local project to Vercel, push it to GitHub/GitLab/Bitbucket and [import to Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example).
-
-**Important**: When you import your project on Vercel, make sure to click on **Environment Variables** and set them to match your `.env.local` file.
-
-#### Deploy from Our Template
-
-Alternatively, you can deploy using our template by clicking on the Deploy button below.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/cms-cosmic&project-name=cms-cosmic&repository-name=cms-cosmic&env=COSMIC_BUCKET_SLUG,COSMIC_READ_KEY,COSMIC_PREVIEW_SECRET&envDescription=Required%20to%20connect%20the%20app%20with%20Cosmic&envLink=https://vercel.link/cms-cosmic-env)
+## Additional Documentation
+[Prettier Options](https://prettier.io/docs/en/options.html)
+[Es-Lint](https://eslint.org/docs/user-guide/getting-started)
+[Airbnb Typescript](https://www.npmjs.com/package/eslint-config-airbnb-typescript)
