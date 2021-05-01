@@ -42,6 +42,6 @@ Don't forget to install the plugins:
 [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 ## Additional Documentation
-[Prettier Options](https://prettier.io/docs/en/options.html)
-[Es-Lint](https://eslint.org/docs/user-guide/getting-started)
+[Prettier Options](https://prettier.io/docs/en/options.html) <br/>
+[Es-Lint](https://eslint.org/docs/user-guide/getting-started) <br/>
 [Airbnb Typescript](https://www.npmjs.com/package/eslint-config-airbnb-typescript)
