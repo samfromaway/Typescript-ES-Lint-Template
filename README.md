@@ -47,6 +47,5 @@ Don't forget to install the plugins:
 [Airbnb Typescript](https://www.npmjs.com/package/eslint-config-airbnb-typescript)
 
 ## Javascript
-Check out this [Javascript Example](https://github.com/samfromaway/Javascript-ES-Lint-Template)
+Check out this [Javascript (JSX) Example](https://github.com/samfromaway/Javascript-ES-Lint-Template)
 
-https://github.com/samfromaway/Javascript-ES-Lint-Template
