@@ -44,6 +44,7 @@ Don't forget to install the plugins:
 ## Additional Documentation
 [Prettier Options](https://prettier.io/docs/en/options.html) <br/>
 [Es-Lint](https://eslint.org/docs/user-guide/getting-started) <br/>
+[Husky](https://typicode.github.io/husky/#/)  <br/>
 [Airbnb Typescript](https://www.npmjs.com/package/eslint-config-airbnb-typescript)
 
 ## Javascript
