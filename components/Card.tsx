@@ -1,4 +1,4 @@
-type CardProps = { title: number; description: string };
+type CardProps = { title: string; description: string };
 
 export default function Card({ title, description }: CardProps) {
   return (
