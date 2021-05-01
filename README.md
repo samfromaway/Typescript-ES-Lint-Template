@@ -38,10 +38,15 @@ Check out this video to get more information: [https://youtu.be/IrPz0kd2FTk](htt
 ## Installed VS Code Plugins
 Don't forget to install the plugins:
 
-[ES-Lint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+[ES-Lint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) <br/>
 [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 ## Additional Documentation
 [Prettier Options](https://prettier.io/docs/en/options.html) <br/>
 [Es-Lint](https://eslint.org/docs/user-guide/getting-started) <br/>
 [Airbnb Typescript](https://www.npmjs.com/package/eslint-config-airbnb-typescript)
+
+## Javascript
+Check out this [Javascript (JSX) Example](https://github.com/samfromaway/Javascript-ES-Lint-Template)
+
+https://github.com/samfromaway/Javascript-ES-Lint-Template
