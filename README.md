@@ -24,7 +24,6 @@ Check out this video to get more information: [https://youtu.be/IrPz0kd2FTk](htt
     ],
     "workbench.iconTheme": "material-icon-theme",
     "json.schemas": [
-    
     ],
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "javascript.updateImportsOnFileMove.enabled": "never",
