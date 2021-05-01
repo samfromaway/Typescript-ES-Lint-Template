@@ -1,0 +1,32 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": 2020, // Allows for the parsing of modern JS
+    "ecmaFeatures": {
+      "jsx": true // Allows for the parsing of JSX
+    }
+  },
+
+  "extends": ["airbnb-typescript", "plugin:prettier/recommended"],
+
+  "rules": {
+    "react/no-danger": "off", // it's self explainatory that no-danger should be used sparingly
+    "react/react-in-jsx-scope": "off", // next.js does not require react in most components
+    "react/prop-types": "off", // as long as TS strict mode is off this is not required
+    "no-console": "error", // no console statements allowed
+    "prettier/prettier": "off" // don't show prettier errors as it will be fixed when saved anyway
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+    "node": true,
+    "browser": true,
+    "amd": true
+  }
+}
